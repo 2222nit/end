@@ -1,0 +1,28 @@
+{
+  "name": "if",
+  "version": "1.0.0",
+  "description": "\"It's my first project\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon Src/Index.js"
+  },
+  "author": "Nitish",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^9.3.3",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2222nit/end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2222nit/end/issues"
+  },
+  "homepage": "https://github.com/2222nit/end#readme"
+}
