@@ -6,4 +6,4 @@ const {createuser } = require("../Controller/usercontroller")
 
 route.post("/createuser", createuser)
 
-module.exports = route
+module.exports = Router;
