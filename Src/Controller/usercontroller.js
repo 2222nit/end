@@ -1,6 +1,8 @@
 const userModel = require("../Model/UserModel");
 const { validemail, validpassword, validname } = require("../validation/authorvalidation");
 const bcrypt = require("bcrypt");
+const {VerifyUserotp } = require("../nodemailer/Nodemailer")
+require('dotenv').config();
 
 exports.createuser = async (req, res) => {
   try {
@@ -39,12 +41,12 @@ if (!validpassword(password)) {
     message: "password is not valid"
   });
 }
-
-// data.otp = randomOtp;
-// const hashPassword = await bcrypt.hash(password, 10);
-// data.password = hashPassword;
-
-// Create user in DB
+  VerifyUserotp(name, email, randomOtp);
+        data.otp = randomOtp;
+        data.role = "user";
+        const hashPassword = await bcrypt.hash(password, 10)
+        data.password = hashPassword;
+        
 const DB = await userModel.create(data);
 
 return res.status(201).send({
